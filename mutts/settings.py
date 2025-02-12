@@ -5,12 +5,13 @@ from django.core.management.utils import get_random_secret_key
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 ALLOWED_HOSTS = [
-    "localhost",
     "127.0.0.1",
-    ".vercel.app",  # Allow all Vercel subdomains
-    "mutts-django.vercel.app",  # Main domain
+    "localhost",
+    ".vercel.app",  # Allow all subdomains of vercel.app
+    "mutts-django.vercel.app",  # Your specific domain
+    "mutts-django-dqjqksmyx-dani-valois-projects.vercel.app",  # Deployment-specific domain
 ]
- 
+
  
 
 SECRET_KEY = get_random_secret_key()
@@ -39,11 +40,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # ✅ Required for collectstatic
 
 DEBUG = True  # ✅ Keep True for debugging. Change to False for production.
 
-ALLOWED_HOSTS = [
-    "127.0.0.1", 
-    "localhost", 
-    "lojinhamutts.vercel.app",
-]
 
 ROOT_URLCONF = 'mutts.urls'  # ✅ This should be here!
 
