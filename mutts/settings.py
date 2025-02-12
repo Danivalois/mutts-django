@@ -40,7 +40,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # ✅ Add this to find static files
 STATIC_ROOT = BASE_DIR / "staticfiles"  # ✅ Required for collectstatic
 
 
-DEBUG = True  # ✅ Keep True for debugging. Change to False for production.
+DEBUG = False  # ✅ Keep True for debugging. Change to False for production.
 
 
 ROOT_URLCONF = 'mutts.urls'  # ✅ This should be here!

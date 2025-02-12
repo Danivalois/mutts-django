@@ -6,6 +6,13 @@ from .forms import ProductForm
 from django.views.generic import ListView
 
 
+
+
+def home(request):
+    return render(request, "home.html")
+
+
+
 def product_list(request):
     print("🟢 Loading Product List Page")  # Debug log
     products = Product.objects.all()
@@ -58,4 +65,7 @@ class ProductListView(ListView):
     
 #   def get_queryset(self):
 #    return Product.objects.values("product_code", "product_short_description")
+
+
+
 
