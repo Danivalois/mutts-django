@@ -2,10 +2,9 @@
 import os
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
+from django.shortcuts import render
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
-
-import os
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
@@ -13,6 +12,29 @@ ALLOWED_HOSTS = [
     ".vercel.app",
     os.getenv("VERCEL_URL", ""),  # Dynamically get Vercel's deployment URL
 ]
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_db_name',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'your_db_host',
+        'PORT': '5432',
+    }
+}
+
+
+
+
+def home(request):
+    return render(request, 'home.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+
 
 
 
@@ -117,4 +139,24 @@ STATICFILES_DIRS = [
 
 TIME_ZONE = "America/Sao_Paulo"
 USE_TZ = True
+
+
+#pages customized
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],  # Make sure your templates are inside the 'templates' folder
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 
