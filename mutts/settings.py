@@ -4,15 +4,15 @@ from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
+
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    ".vercel.app",  # Allow all subdomains of vercel.app
-    "mutts-django.vercel.app",  # Your specific domain
-    "mutts-django-dqjqksmyx-dani-valois-projects.vercel.app",  # Deployment-specific domain
+    ".vercel.app",  # Allows all Vercel subdomains
+    "mutts-django.vercel.app",  # Your primary Vercel domain
+    "mutts-django-q61ao2d5z-dani-valois-projects.vercel.app",  # Your dynamic deployment domain
 ]
 
- 
 
 SECRET_KEY = get_random_secret_key()
 
@@ -105,11 +105,6 @@ DATABASES = {
 }
 
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',  # ✅ Allow localhost access
-    'localhost',   # ✅ Ensure local development works
-    'lojinhamutts.vercel.app',  # ✅ Allow your Vercel domain
-]
 
 ROOT_URLCONF = 'mutts.urls'  # ✅ Ensure this exists!
 
