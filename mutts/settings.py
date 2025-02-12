@@ -7,10 +7,11 @@ SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    ".vercel.app",  # Allows all Vercel subdomains
-    "mutts-django.vercel.app",  # Main production domain
-    "mutts-django-ieak9dziv-dani-valois-projects.vercel.app",  # Vercel preview deployment
+    ".vercel.app",  # Allow all Vercel subdomains
+    "mutts-django.vercel.app",  # Main domain
 ]
+ 
+ 
 
 SECRET_KEY = get_random_secret_key()
 
@@ -36,7 +37,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # ✅ Add this to find static files
 STATIC_ROOT = BASE_DIR / "staticfiles"  # ✅ Required for collectstatic
 
 
-DEBUG = False  # ✅ Keep True for debugging. Change to False for production.
+DEBUG = True  # ✅ Keep True for debugging. Change to False for production.
 
 ALLOWED_HOSTS = [
     "127.0.0.1", 
