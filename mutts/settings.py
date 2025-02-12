@@ -4,11 +4,12 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    'lojinhamutts.vercel.app',
-    '192.168.0.5'  # Add the new IP here
+    "localhost",
+    "127.0.0.1",
+    "mutts-django.vercel.app",
+    "mutts-django-kg33f8f9c-dani-valois-projects.vercel.app",
 ]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
