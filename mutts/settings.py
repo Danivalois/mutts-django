@@ -1,6 +1,7 @@
 # settings.py
 import os
 from pathlib import Path
+from django.core.management.utils import get_random_secret_key
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 ALLOWED_HOSTS = [
@@ -8,6 +9,14 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     ".vercel.app",  # Allows all Vercel subdomains
     "mutts-django.vercel.app",  # Main production domain
+    "mutts-django-ieak9dziv-dani-valois-projects.vercel.app",  # Vercel preview deployment
+]
+
+SECRET_KEY = get_random_secret_key()
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://mutts-django.vercel.app",
+    "https://*.vercel.app"
 ]
 
 
