@@ -6,9 +6,10 @@ SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "mutts-django.vercel.app",
-    "mutts-django-kg33f8f9c-dani-valois-projects.vercel.app",
+    ".vercel.app",  # Allows all Vercel subdomains
+    "mutts-django.vercel.app",  # Main production domain
 ]
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
