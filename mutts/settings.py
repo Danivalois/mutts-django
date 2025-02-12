@@ -5,13 +5,15 @@ from django.core.management.utils import get_random_secret_key
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "%j8e&1_gf_t*dpp)j@stuzd=r+(^yy71(z+&6l@551137ugxur"
 
+import os
+
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
-    ".vercel.app",  # Allows all Vercel subdomains
-    "mutts-django.vercel.app",  # Your primary Vercel domain
-    "mutts-django-q61ao2d5z-dani-valois-projects.vercel.app",  # Your dynamic deployment domain
+    ".vercel.app",
+    os.getenv("VERCEL_URL", ""),  # Dynamically get Vercel's deployment URL
 ]
+
 
 
 SECRET_KEY = get_random_secret_key()
