@@ -17,11 +17,11 @@ ALLOWED_HOSTS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
-        'HOST': 'your_db_host',
-        'PORT': '5432',
+        'NAME': 'postgres',  # Supabase default database name
+        'USER': 'postgres',  # Supabase default user
+        'PASSWORD': '2h.8QG38Uba_g@w',  # Your Supabase password
+        'HOST': 'mfusnfwxtnzzbmalklqw.supabase.co',  # Your Supabase database host
+        'PORT': '5432',  # Default PostgreSQL port
     }
 }
 
@@ -117,18 +117,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # ✅ Ensures SQLite is used
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 
 ROOT_URLCONF = 'mutts.urls'  # ✅ Ensure this exists!
 
